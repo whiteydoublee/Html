@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body > div {
+            width: 300px;
+            height: 300px;
+            border: 1px dashed black;
+        }
+
+        .box1 > div {
+            position: relative; /* absolute, right*/
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            background: green;
+            box-sizing: border-box;
+        }
+
+        .box2 > div { /* absolute, bottom : 0 , right : 0*/
+            position: relative;
+            left: 100px;
+            top: 100px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            background: green;
+            box-sizing: border-box;
+        }
+
+        .box3 { position: relative;}
+
+        .innerbox1 { /*position: absolute right 0 bottom 0*/
+            position: absolute;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background: green;
+            box-sizing: border-box;
+        }
+        
+        .innerbox1 > div { /*left:0px top 0px*/
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+
+        }
+
+        .innerbox2 { /*left:0, bottom:0*/
+            position: relative;
+            top: 100px;
+            width: 200px;
+            height: 200px;
+            background: green;
+            box-sizing: border-box;
+        }
+        .innerbox2 > div {
+            position: absolute;
+            bottom: 0px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+        .box5{
+            position: relative;
+        }
+        .innerbox3 {
+           position: absolute;
+           left: 50%;
+           margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            background: green;
+            box-sizing: border-box;
+        }
+        .innerbox3 > div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+
+        .innerbox4 {
+            position: relative;
+            left: 50px;
+            top: 50px;
+            width: 200px;
+            height: 200px;
+            background: green;
+            box-sizing: border-box;
+        }
+        .innerbox4 > div {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+        .box7 {}
+        .box7 > div {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .box7 > div:nth-child(1) {
+            margin-left: 100px;
+            background: red;
+            
+        }
+        .box7 > div:nth-child(2) {
+            clear: left;
+            background: green;
+        }
+        .box7 > div:nth-child(3) {
+            float: right;
+            background: blue;
+        }
+        .box7 > div:nth-child(4) {
+            margin-left: 100px;
+            clear: left;
+            background: yellow;
+        }
+
+        /*8번 문제*/
+        .box8 {}
+        .box8 > div{
+            
+            width: 100px;
+            height: 100px;
+        }
+        .box8 > div:nth-child(1) {
+            float: left;
+            background: red;
+        }
+        .box8 > div:nth-child(2) {
+            float: right;
+            background: green;
+        }
+        .box8 > div:nth-child(3) {
+            float: left;
+            clear: left;
+            margin-left: 100px;
+            background: yellow;
+        }
+        .box8 > div:nth-child(4) {
+            float: left;
+            clear: left;
+            background: pink;
+        }
+        .box8 > div:nth-child(5) {
+            float: right;
+            background: blue;
+        }
+
+        /*9번*/
+        .box9 {}
+        .box9 > div {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .box9 > div:nth-child(1){
+
+            background: red;
+        }
+        .box9 > div:nth-child(2){
+            background: green;
+        }
+        .box9 > div:nth-child(3){
+            clear: both;
+            background: blue;
+        }
+
+         /*10번*/
+         .box10 {}
+        .box10 > div {
+            float: right;
+            width: 100px;
+            height: 100px;
+        }
+        .box10 > div:nth-child(1){
+
+            background: red;
+        }
+        .box10 > div:nth-child(2){
+            background: green;
+        }
+        .box10 > div:nth-child(3){
+            clear: both;
+            background: blue;
+        }
+
+        /*11*/
+        .box11 > div {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box11 > div:nth-child(1) {background: red;}
+        .box11 > div:nth-child(2) {background: green;}
+        .box11 > div:nth-child(3) {background: blue;}
+        .box11 > div:nth-child(4) {background: orange; clear: left;}
+        .box11 > div:nth-child(5) {background: pink;}
+        .box11 > div:nth-child(6) {background: gold; clear: left;}
+
+    </style>
+</head>
+<body>
+    <h3>1. 다음과 같이 positioning 하세요.</h3>
+    <div class="box1">
+        <div></div>
+    </div>
+
+    <h3>2. 다음과 같이 positioning 하세요.</h3>
+    <div class="box2">
+        <div></div>
+    </div>
+
+    <h3>3. 다음과 같이 positioning 하세요.</h3>
+    <div class="box3">
+        <div class="innerbox1">
+            <div></div>
+        </div>
+    </div>
+
+    <h3>4. 다음과 같이 positioning 하세요.</h3>
+    <div class="box4">
+        <div class="innerbox2">
+            <div></div>
+        </div>
+    </div>
+
+    <h3>5. 다음과 같이 positioning 하세요.</h3>
+    <div class="box5">
+        <div class="innerbox3">
+            <div></div>
+        </div>
+    </div>
+
+    <h3>6. 다음과 같이 positioning 하세요.</h3>
+    <div class="box6">
+        <div class="innerbox4">
+            <div></div>
+        </div>
+    </div>
+
+    <h3>7. 다음과 같이 positioning 하세요.</h3>
+    <div class="box7">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h3>8. 다음과 같이 positioning 하세요.</h3>
+    <div class="box8">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h3>9. 다음과 같이 positioning 하세요.</h3>
+    <div class="box9">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h3>10. 다음과 같이 positioning 하세요.</h3>
+    <div class="box10">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h3>11. 다음과 같이 positioning 하세요.</h3>
+    <div class="box11">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
