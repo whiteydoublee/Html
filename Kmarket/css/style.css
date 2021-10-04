@@ -1,0 +1,202 @@
+/*초기화*/
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '고딕';
+}
+
+ul, ol{list-style: none;}
+a {text-decoration: none; color: #111;}
+
+#wrapper{
+    width: 100%;
+    height: auto;
+}
+
+/*헤더영역*/
+header {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+header > div {
+    width: 100%;
+    box-sizing: border-box;
+}
+header > .top {
+    height: 35px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+header > .top > div {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto; /*가운데 정렬*/
+    text-align: right; /*글자 오른쪽 정렬*/
+}
+header > .top > div > a { 
+    display: inline-block; /*크기를 가질 수 있고, 가로정렬 / block : 세로정렬*/
+    height: 100%;
+    padding: 0 10px; /*위 아래 좌 우*/
+    line-height: 33px;
+    border-left: 1px solid #e9e9e9;
+    color: #646464;
+}
+
+header > .top > div > a:last-child{border-right: 1px solid #e9e9e9;}
+
+header > .top > div > a:hover {
+    color: #333;
+    border-bottom: 1px solid #444;
+}
+
+header > .logo {
+    height: 115px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+header > .logo > div {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+header > .logo > div > a {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+header > .logo > div > form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -185px;
+    margin-top: -22px;
+    display: inline-block;
+    width: 370px;
+    height: 45px;
+}
+
+header > .logo > div > form > input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+header > .logo > div > form > button {
+    position: absolute;
+    right: 6px;
+    top: 10px;
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    outline: none;
+}
+
+header > .menu {
+    height: 46px;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+header > .menu > div {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header > .menu> div > ul {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+header > .menu> div > ul:nth-child(1){
+    float: left;
+}
+
+   header > .menu> div > ul:nth-child(2){
+    float: right;
+}
+
+header > .menu > div > ul >li {
+    float: left;
+    display: list-item;
+}
+
+header > .menu > div > ul > li > a {
+    border-left: 1px solid #e9e9e9;
+    padding: 0 10px;
+}
+
+/*메인영역*/
+main{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+main > aside {
+    float: left;
+    width: 215px;
+    height: 100%;
+}
+
+main > aside > .category {
+    position: relative;
+    width: 100%;
+    height: 425px;
+    background: #333949;
+}
+
+main > aside > .category > li {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    color: #ccc;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #2b313f;
+    box-sizing: border-box;
+}
+
+main > aside > .category > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    color: #ccc;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+main > aside > .category ol {
+    position: absolute;
+    left: 215px;
+    top: 0;
+    display: none;
+    width: 215px;
+    height: 100%;
+    border: 1px solid #787f89;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 10000;
+}
+main > aside > .category ol > li {
+    width: 100%;
+    height: 24px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*푸터영역*/
